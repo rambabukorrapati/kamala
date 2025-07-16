@@ -8,5 +8,6 @@ RUN mvn clean package -DskipTests
 # ---------- Run stage ----------
 FROM eclipse-temurin:21-jdk
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+COPY --from=build /app/target/*.jar book-0.0.1-SNAPSHOT.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","book-0.0.1-SNAPSHOT.jar"]
