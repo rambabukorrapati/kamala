@@ -36,7 +36,7 @@ public class AuthController {
         }
 
         if (result.hasErrors()) {
-            return "Register"; // stays on form with validation errors
+            return "register"; // stays on form with validation errors
         }
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
