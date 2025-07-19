@@ -10,8 +10,18 @@
 <body>
 <h2>Register</h2>
 <form th:action="@{/register}" th:object="${user}" method="post">
-    <input type="text" th:field="*{username}" placeholder="Username" required />
-    <input type="password" th:field="*{password}" placeholder="Password" required />
+    <div>
+        <label>Username:</label>
+        <input type="text" th:field="*{Username}" />
+        <div th:if="${#fields.hasErrors('Username')}" th:errors="*{username}"></div>
+    </div>
+
+    <div>
+        <label>Password:</label>
+        <input type="Password" th:field="*{Password}" />
+        <div th:if="${#fields.hasErrors('Password')}" th:errors="*{password}"></div>
+    </div>
+
     <button type="submit">Register</button>
 </form>
 <p>Already have an account? <a th:href="@{/login}">Login here</a></p>
