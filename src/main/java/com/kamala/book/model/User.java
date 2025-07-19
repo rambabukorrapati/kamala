@@ -2,7 +2,6 @@ package com.kamala.book.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
-import org.springframework.data.annotation.Id;
 
 @Entity
 @Table(name = "users")
