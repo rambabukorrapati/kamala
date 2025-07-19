@@ -27,7 +27,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public String registerUser(@ModelAttribute("User") @Valid User user,
+    public String registerUser(@ModelAttribute("user") @Valid User user,
                                BindingResult result,
                                Model model) {
 
